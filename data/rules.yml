@@ -1,0 +1,53 @@
+version: '2.0'
+rules:
+
+  - rule: already_have_agent
+    steps:
+      - intent: already_have_agent
+      - action: utter_goodbye
+
+  - rule: restart
+    steps:
+      - intent: restart
+      - action: action_restart
+   
+  - rule: out-of-scope
+    steps:
+      - intent: nlu_fallback
+      - action: utter_fallback
+
+  - rule: greet
+    steps:
+    - intent: start_conversation 
+    - action: utter_greeting_sharon_prudential
+
+  - rule: who
+    steps:
+    - intent: who_is
+    - action: utter_greeting_repeat_sharon_prudential
+
+  - rule: reject
+    steps:
+    - intent: reject
+    - action: action_hello_world
+
+  - rule: not_singaporean
+    steps:
+    - intent: not_singaporean
+    - action: utter_goodbye
+
+  - rule: busy
+    steps:
+    - intent: busy
+    - action: utter_busy_call_back
+
+  - rule: already_done
+    steps:
+    - intent: already_done
+    - action: utter_done_nomination
+
+  - rule: looking_for
+    steps:
+    - intent: looking_for
+    - action: utter_who_am_i
+

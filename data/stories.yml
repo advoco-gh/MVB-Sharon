@@ -1,0 +1,98 @@
+version: '2.0'
+stories:
+  - story: main_path
+    steps:
+      - intent: confirm
+      - action: utter_discuss_nomination
+      - intent: confirm
+      - action: utter_purpose
+      - intent: confirm
+      - action: utter_appointment_call_time
+      - intent: confirm
+      - action: utter_age_info
+      - intent: age
+      - action: utter_goodbye
+  - story: main_path + confirm instead of age
+    steps:
+      - intent: confirm
+      - action: utter_discuss_nomination
+      - intent: confirm
+      - action: utter_purpose
+      - intent: confirm
+      - action: utter_appointment_call_time
+      - intent: confirm
+      - action: utter_age_info
+      - intent: confirm
+      - action: utter_goodbye
+  - story: main_path + morning
+    steps:
+      - intent: confirm
+      - action: utter_discuss_nomination
+      - intent: confirm
+      - action: utter_purpose
+      - intent: confirm
+      - action: utter_appointment_call_time
+      - intent: morning
+      - action: utter_age_info
+      - intent: age
+      - action: utter_goodbye
+  - story: main_path + morning + confirm instead of age
+    steps:
+      - intent: confirm
+      - action: utter_discuss_nomination
+      - intent: confirm
+      - action: utter_purpose
+      - intent: confirm
+      - action: utter_appointment_call_time
+      - intent: morning
+      - action: utter_age_info
+      - intent: confirm
+      - action: utter_goodbye
+  - story: main_path + afternoon
+    steps:
+      - intent: confirm
+      - action: utter_discuss_nomination
+      - intent: confirm
+      - action: utter_purpose
+      - intent: confirm
+      - action: utter_appointment_call_time
+      - intent: afternoon
+      - action: utter_age_info
+      - intent: age
+      - action: utter_goodbye
+  - story: main_path + afternoon + confirm instead of age
+    steps:
+      - intent: confirm
+      - action: utter_discuss_nomination
+      - intent: confirm
+      - action: utter_purpose
+      - intent: confirm
+      - action: utter_appointment_call_time
+      - intent: afternoon
+      - action: utter_age_info
+      - intent: confirm
+      - action: utter_goodbye
+  - story: main_path + evening
+    steps:
+      - intent: confirm
+      - action: utter_discuss_nomination
+      - intent: confirm
+      - action: utter_purpose
+      - intent: confirm
+      - action: utter_appointment_call_time
+      - intent: evening
+      - action: utter_age_info
+      - intent: age
+      - action: utter_goodbye
+  - story: main_path + evening + confirm instead of age
+    steps:
+      - intent: confirm
+      - action: utter_discuss_nomination
+      - intent: confirm
+      - action: utter_purpose
+      - intent: confirm
+      - action: utter_appointment_call_time
+      - intent: evening
+      - action: utter_age_info
+      - intent: confirm
+      - action: utter_goodbye
